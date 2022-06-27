@@ -94,12 +94,20 @@
 \RequirePackage{abstract}
 \renewcommand{\abstractnamefont}{\normalfont\normalsize\scshape\centering}
 
-\RequirePackage{caption}
-\captionsetup{labelfont=sc,textfont=it}
+% Figures and tables
 
+\RequirePackage{caption}
+\captionsetup{labelfont=sc, textfont=it}
+
+\usepackage{chngcntr}
+\counterwithin{table}{section}
+\counterwithin{figure}{section}
+
+% Math
 
 \RequirePackage{amsmath}
 \RequirePackage{amssymb}
+
 \RequirePackage{stmaryrd}
 \newrobustcmd{\lBrack}{\llbracket}
 \newrobustcmd{\rBrack}{\rrbracket}
