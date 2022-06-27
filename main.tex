@@ -1,0 +1,137 @@
+% !TEX program = pdflatex
+\documentclass{fancy-article}
+% Options: french
+% \usepackage{showframe}
+
+
+\input{header/tikz}
+\input{header/kl-config}
+\input{header/kl-notions}
+\input{header/macros}
+
+% \newcommand{\textheader}{\LaTeX~ with knowledge}
+\title{An article about something\thanks{Merci à l'ANR pour tout l'argent !}}
+\author[1]{Machin}
+\author[2]{Truc}
+\author[1]{Bidule}
+\affil[1]{Institut du Fromage}
+\affil[2]{Baguette Université Sorbonne-Est}
+\date{\today}
+
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+  Nunc ac lobortis nibh. Phasellus eget metus auctor, aliquam libero vitae, vehicula mauris. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec eros leo, sodales a dolor quis, scelerisque elementum massa. Mauris vitae lorem ut velit volutpat scelerisque vel nec nisl. Vestibulum ipsum purus, pulvinar ut erat faucibus, aliquam porta ex. Sed porta nisl ac neque tempor, at congue lorem cursus. Suspendisse aliquet sollicitudin ante, ac blandit nulla tincidunt id. Pellentesque auctor tellus neque, id mattis orci lacinia at. Pellentesque rutrum, ipsum nec pretium rhoncus, nibh erat imperdiet arcu, sed scelerisque quam massa vel mi. Sed tristique nisi vel posuere lobortis. Proin finibus lobortis felis, eget commodo sapien vestibulum varius. Suspendisse a quam sed leo maximus porttitor et at orci. Quisque hendrerit ex vel diam sollicitudin, eget egestas libero tincidunt. 
+\end{abstract}
+
+This document was written using "knowledge".
+The notion of "first-order formula" is introduced in
+\kCref{first-order formula}, Page \kpageref{first-order formula}.
+
+\section{Categorical preliminaries}
+ 
+\subsection{The powerset monad}
+
+\AP The ""powerset"" of $X$ is denoted by $\intro*\pset{X}$. The categories
+of sets, monoids and semigroups are denoted by $\intro*\catSet$,
+$\intro*\catMon$ and $\intro*\catSgp$, respectively.
+This notion is "unknown". We define this ""unknown"" stuff, and then call it again: "unknown".
+
+\begin{figure}
+  \begin{center}
+  \begin{tikzcd}[row sep=large,column sep=2.1em]
+    & X \dlar["f" above left] \dar[dotted, "f\times g"{description}] \drar["g"] & \\
+    A & A\times B \lar["\pi_1"] \rar["\pi_2" below] & B
+  \end{tikzcd}
+  \caption{\label{fig:cartesian_product}
+    Cartesian product.}
+  \end{center}
+\end{figure}
+\AP In a given category $\mathcal{C}$, a ""cartesian product""
+of two objects $X$ and $Y \in \mathcal{C}$ is
+another object $X\times Y \in \mathcal{C}$ together with a pair of arrows
+$\pi_1: X\times Y \to X$, $\pi_2: X\times Y \to Y$ such that for every
+object $U\in\mathcal{C}$, for every arrows $f: U \to X$ and $g: U \to Y$,
+there exists a unique arrow $f\times g : U \to X\times Y$ making the
+diagram in \Cref{fig:cartesian_product} commute.
+A ""cartesian category"" is a triple $(\mathcal{C}, \times, 1)$
+where:
+\begin{itemize}
+  \item $\times$ is a map that associates a "cartesian product" to
+  each pair of objects of $\mathcal{C}$, and
+  \item $1$ is a terminal object of $\mathcal{C}$---i.e. an object such that
+  for all $X\in \mathcal{C}$.
+\end{itemize}
+Note that terminal objects and "cartesian products" are unique, up to
+isomorphism, and that $X \times 1$ and $1\times X$ are isomorphic to $X$
+for all $X \in \mathcal{C}$.
+
+\AP It is routine to check that $\catSet$, $\catMon$ and $\catSgp$ are
+"cartesian". Moreover, the forgetful functors from $\catMon \to \catSgp$
+and $\catSgp \to \catSet$ preserve "cartesian products".
+
+
+\AP Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nulla mauris, facilisis a elementum at, rutrum a metus. Vestibulum neque lorem, pretium sed sapien ut, pulvinar dictum turpis. Phasellus tempor, mauris quis euismod bibendum, lectus neque cursus eros, tincidunt maximus dui enim nec sem. Suspendisse risus est, euismod nec egestas a, tempor vitae massa. Vestibulum mollis sapien ligula, ac condimentum libero pharetra eget. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam feugiat volutpat finibus. Sed lobortis velit enim, vitae malesuada mi aliquet id. Mauris convallis facilisis erat non tempor. Sed ullamcorper velit quis lacus facilisis placerat \cite{rosenstein1982linear}.
+
+\begin{table}
+  \centering
+  \begin{tabular}{ll}
+    \toprule
+    Category & Arrows \\
+    \midrule
+    $\catSet$ & Functions \\
+    $\catMon$ & Monoid morphisms \\
+    $\catSgp$ & Semigroup morphisms \\
+    \bottomrule
+  \end{tabular}
+  \caption{Some table}
+\end{table}
+\AP Suspendisse dictum pretium quam, eu luctus arcu euismod in. Quisque euismod nulla nec nisi hendrerit rutrum. Mauris ultricies quis dui eu dictum. Morbi eu iaculis ex. Etiam odio enim, consequat ut leo eget, consectetur ultrices neque. Aliquam erat volutpat. Donec aliquet, urna vitae tristique pharetra, est ante tincidunt est, at varius libero dui at mauris. Nullam eu interdum dolor, vel faucibus risus. Suspendisse egestas nisi ligula, et rutrum dolor aliquet eget. Maecenas dui lacus, porttitor finibus tincidunt id, aliquet eu est. Mauris accumsan dui nec augue sollicitudin tincidunt. Proin in eros ac quam elementum vulputate. Cras quis ex id quam varius placerat.
+
+\subsection{Other stuff}
+
+\AP Vivamus vel suscipit nunc. Proin molestie viverra vulputate. Ut vulputate tellus ultrices nulla efficitur, sit amet tincidunt nulla finibus. Duis id lectus scelerisque, tempus nulla a, interdum purus. Aenean tempus interdum mauris in semper. Morbi dignissim nulla turpis, nec sagittis lorem aliquet maximus. Nullam convallis pulvinar tellus ac blandit. Donec in lectus vitae lacus imperdiet accumsan porta eget nisi. Proin quis mattis tortor, id tincidunt ex.
+
+
+\section{First-order logic}
+
+
+\AP Given a signature\footnote{Recall that a signature is a set of function 
+symbols and a set of predicate symbols.}
+$\mathfrak{s}$ without any function symbol,
+the set of ""first-order formul\ae{}"" over some fixed infinite set of
+variables is defined by the grammar
+\[
+  \varphi ::=
+  x \mid P_{(n)}(x, \hdots, x) \mid \neg \varphi \mid \varphi \lor \varphi \mid \varphi \land \varphi
+  \mid \varphi \Rightarrow \varphi \mid \forall x.\, \varphi \mid \exists x.\,
+  \varphi,
+\]
+where $x$ ranges over the set of variables and $P_{(n)}$ over the
+set of predicates symbols of arity $n\in \mathbb{N}$.
+
+\AP We will maintly focus on the first-order theory of linear orderings
+\cite{rosenstein1982linear}: we assume that the signature $\mathfrak{s}$
+consists of exactly one predicate of arity 2, denoted $<$, and that this
+predicate is always interpreted, in every model, as a linear order.
+
+
+\AP Sed ullamcorper ex eget felis viverra bibendum. Quisque bibendum quam id varius tempor. Integer fermentum euismod diam, vitae facilisis neque aliquet vitae. Integer scelerisque, ligula eget gravida suscipit, odio enim dignissim odio, a hendrerit justo sem in massa. Cras non ex in lorem blandit tristique. Quisque vestibulum mi a risus malesuada vulputate. Integer porta dui ut ante dignissim aliquam. Phasellus porttitor ultrices nisi, a gravida orci sagittis ac. Sed et vulputate sem. Proin at consectetur magna, vitae vehicula felis. Quisque id pellentesque sapien. Fusce volutpat lorem fringilla, interdum lorem sit amet, vehicula dui. Nam metus ante, semper ac urna nec, porttitor dictum libero. Vivamus sapien justo, elementum quis rhoncus nec, lacinia sed lectus.
+
+\AP Donec nec volutpat lacus. Nunc vitae nisl vitae ipsum sodales porta sit amet ut arcu. Integer auctor odio vel rutrum lacinia. Sed sed nulla orci. Nullam volutpat pretium lorem a convallis. Etiam hendrerit sagittis sapien sed blandit. Sed nisi nibh, tincidunt ut elementum vitae, posuere in neque. Pellentesque fringilla, ex a maximus posuere, sapien ex accumsan lectus, eu pellentesque nisl metus eu quam. Nam efficitur bibendum ex, vitae efficitur lectus fermentum eu. Nam vestibulum augue enim, in feugiat eros egestas non. Suspendisse euismod imperdiet scelerisque. Curabitur ac posuere libero. Sed mattis eu eros vel fermentum. Morbi tincidunt non lectus pharetra molestie. Maecenas vel imperdiet justo, in eleifend est.
+
+\AP Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nulla mauris, facilisis a elementum at, rutrum a metus. Vestibulum neque lorem, pretium sed sapien ut, pulvinar dictum turpis. Phasellus tempor, mauris quis euismod bibendum, lectus neque cursus eros, tincidunt maximus dui enim nec sem. Suspendisse risus est, euismod nec egestas a, tempor vitae massa. Vestibulum mollis sapien ligula, ac condimentum libero pharetra eget. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam feugiat volutpat finibus. Sed lobortis velit enim, vitae malesuada mi aliquet id. Mauris convallis facilisis erat non tempor. Sed ullamcorper velit quis lacus facilisis placerat.
+
+\AP Sed ullamcorper ex eget felis viverra bibendum. Quisque bibendum quam id varius tempor. Integer fermentum euismod diam, vitae facilisis neque aliquet vitae. Integer scelerisque, ligula eget gravida suscipit, odio enim dignissim odio, a hendrerit justo sem in massa. Cras non ex in lorem blandit tristique. Quisque vestibulum mi a risus malesuada vulputate. Integer porta dui ut ante dignissim aliquam. Phasellus porttitor ultrices nisi, a gravida orci sagittis ac. Sed et vulputate sem. Proin at consectetur magna, vitae vehicula felis. Quisque id pellentesque sapien. Fusce volutpat lorem fringilla, interdum lorem sit amet, vehicula dui. Nam metus ante, semper ac urna nec, porttitor dictum libero. Vivamus sapien justo, elementum quis rhoncus nec, lacinia sed lectus.
+
+\AP Donec nec volutpat lacus. Nunc vitae nisl vitae ipsum sodales porta sit amet ut arcu. Integer auctor odio vel rutrum lacinia. Sed sed nulla orci. Nullam volutpat pretium lorem a convallis. Etiam hendrerit sagittis sapien sed blandit. Sed nisi nibh, tincidunt ut elementum vitae, posuere in neque. Pellentesque fringilla, ex a maximus posuere, sapien ex accumsan lectus, eu pellentesque nisl metus eu quam. Nam efficitur bibendum ex, vitae efficitur lectus fermentum eu. Nam vestibulum augue enim, in feugiat eros egestas non. Suspendisse euismod imperdiet scelerisque. Curabitur ac posuere libero. Sed mattis eu eros vel fermentum. Morbi tincidunt non lectus pharetra molestie. Maecenas vel imperdiet justo, in eleifend est.
+
+\AP Vivamus vel suscipit nunc. Proin molestie viverra vulputate. Ut vulputate tellus ultrices nulla efficitur, sit amet tincidunt nulla finibus. Duis id lectus scelerisque, tempus nulla a, interdum purus. Aenean tempus interdum mauris in semper. Morbi dignissim nulla turpis, nec sagittis lorem aliquet maximus. Nullam convallis pulvinar tellus ac blandit. Donec in lectus vitae lacus imperdiet accumsan porta eget nisi. Proin quis mattis tortor, id tincidunt ex.
+
+\bibliographystyle{alphaurl}
+\bibliography{bibli.bib}
+
+\end{document}

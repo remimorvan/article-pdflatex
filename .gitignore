@@ -1,0 +1,13 @@
+.DS_Store
+main.aux
+main.diagnose
+main.dvi
+main.kaux
+main.log
+main.pdf
+main.synctex.gz
+main.out
+main.bbl
+main.blg
+main.fdb_latexmk
+main.fls
