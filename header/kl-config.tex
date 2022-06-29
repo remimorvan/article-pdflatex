@@ -6,24 +6,24 @@
     %
 }{
     % If we are NOT in paper mode (i.e. in composition mode or electronic mode)
-    \knowledgestyle{intro notion}{color={Ruby Red}, italic}
-    \knowledgestyle{notion}{color={Midnight Green Eagle}}
+    \knowledgestyle{intro notion}{color={Dark Ruby Red}, italic}
+    \knowledgestyle{notion}{color={Dark Blue Sapphire}}
     \hypersetup{
         colorlinks=true,
         breaklinks=true,
-        linkcolor={Midnight Green Eagle}, % Links to sections, pages, etc.
-        citecolor={Midnight Green Eagle}, % Links to bibliography
-        filecolor={Midnight Green Eagle}, % Links to local file
-        urlcolor={Midnight Green Eagle},
+        linkcolor={Dark Blue Sapphire}, % Links to sections, pages, etc.
+        citecolor={Dark Blue Sapphire}, % Links to bibliography
+        filecolor={Dark Blue Sapphire}, % Links to local file
+        urlcolor={Dark Blue Sapphire},
     }
     \IfKnowledgeElectronicModeTF{
         %
     }{
         % If we are in composition mode, highlight unknown stuff (in yellow) and display the anchor point.
-        \knowledgeconfigure{anchor point color={Ruby Red}, anchor point shape=corner}
-        \knowledgestyle{intro unknown}{color={Gamboge}, italic}
-        \knowledgestyle{intro unknown cont}{color={Gamboge}, italic}
-        \knowledgestyle{kl unknown}{color={Gamboge}}
-        \knowledgestyle{kl unknown cont}{color={Gamboge}}
+        \knowledgeconfigure{anchor point color={Dark Ruby Red}, anchor point shape=corner}
+        \knowledgestyle{intro unknown}{color={Dark Gamboge}, italic}
+        \knowledgestyle{intro unknown cont}{color={Dark Gamboge}, italic}
+        \knowledgestyle{kl unknown}{color={Dark Gamboge}}
+        \knowledgestyle{kl unknown cont}{color={Dark Gamboge}}
     }
 }

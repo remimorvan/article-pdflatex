@@ -17,7 +17,6 @@
 \RequirePackage{xcolor}
 
 \definecolor{Rich Black}{HTML}{001219}
-\definecolor{Midnight Green Eagle}{HTML}{005566}
 \definecolor{Blue Sapphire}{HTML}{005f73}
 \definecolor{Viridian Green}{HTML}{0a9396}
 \definecolor{Middle Blue Green}{HTML}{94d2bd}
@@ -28,7 +27,10 @@
 \definecolor{Rufous}{HTML}{ae2012}
 \definecolor{Ruby Red}{HTML}{9b2226}
 
-\definecolor{Dark Red}{HTML}{9d0208}
+\definecolor{Dark Ruby Red}{HTML}{7c1b1e}
+\definecolor{Dark Blue Sapphire}{HTML}{004c5c}
+\definecolor{Dark Gamboge}{HTML}{be7c00}
+
 
 
 % ---------------------------
