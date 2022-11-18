@@ -5,7 +5,7 @@
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
 \ProcessOptions\relax
-\LoadClass[a4paper,10pt]{article}
+\LoadClass[a4,10pt]{article}
 
 
 % ----------------
@@ -51,8 +51,8 @@
 \geometry{
   left=3.5cm,
   right=3.5cm,
-  bottom=2.5cm,
-  top=2.5cm,
+  bottom=3.5cm,
+  top=3.5cm,
   footskip=1cm
 }
 \pagestyle{fancy}
@@ -123,54 +123,32 @@
 
 \RequirePackage{amsthm}
 
-% \newtheoremstyle{fancystyle}
-%   {}               %space above
-%   {}               %space below
-%   {}                      %bodyfont
-%   {0pt}                      %indent
-%   {\bfseries}             %headfont
-%   {.}                      %punctuation
-%   {.5em}                 %space after head
-%   {\thmname{#1}\thmnumber{ #2}\thmnote{: #3}}
-% \theoremstyle{fancystyle}
+\newtheoremstyle{fancystyle}
+  {}               %space above
+  {}               %space below
+  {}                      %bodyfont
+  {0pt}                      %indent
+  {\bfseries}             %headfont
+  {.}                      %punctuation
+  {.5em}                 %space after head
+  {\thmname{#1}\thmnumber{ #2}\thmnote{: #3}}
+\theoremstyle{fancystyle}
 
 
 \RequirePackage[british]{babel}
 \RequirePackage{hyperref}
 \RequirePackage{cleveref}
 
-
-\RequirePackage{thmtools, thm-restate}
-
-\declaretheorem[name=Theorem, numberwithin=section]{theorem}
-  \Crefname{theorem}{Theorem}{Theorems}
-\declaretheorem[name=Proposition, sibling=theorem]{proposition}
-  \Crefname{proposition}{Proposition}{Propositions}
-\declaretheorem[name=Property, sibling=theorem]{property}
-  \Crefname{property}{Property}{Properties}
-\declaretheorem[name=Definition, sibling=theorem]{definition}
-  \Crefname{definition}{Definition}{Definitions}
-\declaretheorem[name=Corollary, sibling=theorem]{corollary}
-  \Crefname{corollary}{Corollary}{Corollaries}
-\declaretheorem[name=Conjecture, sibling=theorem]{conjecture}
-  \Crefname{conjecture}{Conjecture}{Conjectures}
-\declaretheorem[name=Lemma, sibling=theorem]{lemma}
-  \Crefname{lemma}{Lemma}{Lemmata}
-\declaretheorem[name=Example, sibling=theorem]{example}
-  \Crefname{example}{Example}{Examples}
-\declaretheorem[name=Remark, sibling=theorem]{remark}
-  \Crefname{remark}{Remark}{Remarks}
-\declaretheorem[name=Fact, sibling=theorem]{fact}
-  \Crefname{fact}{Fact}{Facts}
-\declaretheorem[name=Observation, sibling=theorem]{observation}
-  \Crefname{observation}{Observation}{Observations}
-\declaretheorem[name=Question, sibling=theorem]{question}
-  \Crefname{question}{Question}{Questions}
-\declaretheorem[name=Claim, sibling=theorem]{claim}
-  \Crefname{claim}{Claim}{Claims}
-\declaretheorem[name=Subclaim, sibling=theorem]{subclaim}
-  \Crefname{subclaim}{Subclaim}{Subclaims}
-
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{propdef}[theorem]{Proposition-definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{fact}[theorem]{Fact}
 
 
 % ---------------
@@ -178,6 +156,7 @@
 % ---------------
 
 \RequirePackage[T1]{fontenc}
+\usepackage[tracking]{microtype}
 
 \RequirePackage[sc, osf]{mathpazo}
 \RequirePackage[euler-digits, small]{eulervm}
