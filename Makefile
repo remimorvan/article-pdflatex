@@ -28,6 +28,7 @@ Clean: # Clean all nonessential files
 	rm -f $(DIAGNOSEFILE) $(FILENAME).kaux $(ZIPFILE)
 
 init:
+	mv main.tex $(TEXFILE)
 	rm README.md
 
 zip:
