@@ -28,7 +28,6 @@ Clean: # Clean all nonessential files
 	rm -f $(DIAGNOSEFILE) $(FILENAME).kaux $(ZIPFILE)
 
 init:
-	Clean
 	rm README.md
 
 zip:
