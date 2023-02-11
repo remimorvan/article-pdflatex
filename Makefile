@@ -11,7 +11,7 @@ TEXFILE = $(FILENAME).tex
 DIAGNOSEFILE = $(FILENAME).diagnose
 ZIPFILE = $(FILENAME).zip
 
-.PHONY: all kl clean zip
+.PHONY: all kl clean Clean init zip
 
 all:
 	latexmk -pdf -use-make -synctex=1 -interaction=nonstopmode -file-line-error $(TEXFILE) -silent
@@ -26,6 +26,10 @@ clean: # Clean all nonessential files, except dvi, pdf and ps files
 Clean: # Clean all nonessential files 
 	latexmk -C -silent
 	rm -f $(DIAGNOSEFILE) $(FILENAME).kaux $(ZIPFILE)
+
+init:
+	Clean
+	rm README.md
 
 zip:
 	zip -r $(ZIPFILE) . -x .git\* .gitignore .vscode\*
