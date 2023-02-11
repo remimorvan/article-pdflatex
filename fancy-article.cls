@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \RequirePackage{etoolbox}
-\ProvidesClass{fancy-article}[30/03/2022]
+\ProvidesClass{fancy-article}[11/02/2023]
 
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
@@ -27,8 +27,11 @@
 \definecolor{Rufous}{HTML}{ae2012}
 \definecolor{Ruby Red}{HTML}{9b2226}
 
-\definecolor{Dark Ruby Red}{HTML}{7c1b1e}
-\definecolor{Dark Blue Sapphire}{HTML}{004c5c}
+% \definecolor{Dark Ruby Red}{HTML}{7c1b1e}
+% \definecolor{Dark Blue Sapphire}{HTML}{004c5c}
+% \definecolor{Dark Gamboge}{HTML}{be7c00}
+\definecolor{Dark Ruby Red}{HTML}{580507}
+\definecolor{Dark Blue Sapphire}{HTML}{053641}
 \definecolor{Dark Gamboge}{HTML}{be7c00}
 
 
@@ -121,42 +124,44 @@
 % ----------------
 
 
-\RequirePackage{amsthm}
+% \RequirePackage{amsthm}
 
-\newtheoremstyle{fancystyle}
-  {}               %space above
-  {}               %space below
-  {}                      %bodyfont
-  {0pt}                      %indent
-  {\bfseries}             %headfont
-  {.}                      %punctuation
-  {.5em}                 %space after head
-  {\thmname{#1}\thmnumber{ #2}\thmnote{: #3}}
-\theoremstyle{fancystyle}
+% \newtheoremstyle{fancystyle}
+%   {}               %space above
+%   {}               %space below
+%   {\itshape}                      %bodyfont
+%   {0pt}                      %indent
+%   {\bfseries}             %headfont
+%   {.}                      %punctuation
+%   {.5em}                 %space after head
+%   {\thmname{#1}\thmnumber{ #2}\thmnote{: #3}}
+% \theoremstyle{fancystyle}
 
 
 \RequirePackage[british]{babel}
 \RequirePackage{hyperref}
 \RequirePackage{cleveref}
 
-\newtheorem{theorem}{Theorem}[section]
-\newtheorem{proposition}[theorem]{Proposition}
-\newtheorem{propdef}[theorem]{Proposition-definition}
-\newtheorem{definition}[theorem]{Definition}
-\newtheorem{corollary}[theorem]{Corollary}
-\newtheorem{conjecture}[theorem]{Conjecture}
-\newtheorem{lemma}[theorem]{Lemma}
-\newtheorem{example}[theorem]{Example}
-\newtheorem{remark}[theorem]{Remark}
-\newtheorem{fact}[theorem]{Fact}
+\usepackage{amsthm, thmtools, thm-restate}
 
+\declaretheorem[name=Theorem, refname={theorem,theorems}, numberwithin=section]{theorem}
+\declaretheorem[name=Proposition, refname={proposition,propositions}, sibling=theorem]{proposition}
+\declaretheorem[name=Property, refname={property,propertys}, sibling=theorem]{property}
+\declaretheorem[name=Definition, refname={definition,definitions}, sibling=theorem]{definition}
+\declaretheorem[name=Corollary, refname={corollary,corollaries}, sibling=theorem]{corollary}
+\declaretheorem[name=Conjecture, refname={conjecture,conjectures}, sibling=theorem]{conjecture}
+\declaretheorem[name=Question, refname={question,questions}, sibling=theorem]{question}
+\declaretheorem[name=Lemma, refname={lemma,lemmata}, sibling=theorem]{lemma}
+\declaretheorem[name=Example, refname={example,examples}, sibling=theorem]{example}
+\declaretheorem[name=Remark, refname={remark,remarks}, sibling=theorem]{remark}
+\declaretheorem[name=Fact, refname={fact,facts}, sibling=theorem]{fact}
+\declaretheorem[name=Fact, refname={claim,claims}, sibling=theorem]{claim}
 
 % ---------------
 % ---- Fonts ----
 % ---------------
 
 \RequirePackage[T1]{fontenc}
-\usepackage[tracking]{microtype}
 
 \RequirePackage[sc, osf]{mathpazo}
 \RequirePackage[euler-digits, small]{eulervm}
