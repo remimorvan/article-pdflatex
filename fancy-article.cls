@@ -73,6 +73,7 @@
 \RequirePackage[noblocks]{authblk}
 \renewcommand\Authfont{\normalsize\normalfont}
 \renewcommand\Affilfont{\small\scshape}
+\setlength{\affilsep}{.2em}
 
 \pretitle{\begin{center}\Large\scshape}
 \posttitle{\par\end{center}}
@@ -83,8 +84,8 @@
 \postauthor{\end{tabular}\par\end{center}}
 
 \predate{\begin{center}\small}
-\postdate{\par\end{center}}
-\setlength{\droptitle}{-1cm}
+\postdate{\par\end{center}\vspace{1em}}
+\setlength{\droptitle}{-60pt}
 
 
 \RequirePackage{titlesec}
