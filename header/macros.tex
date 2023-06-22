@@ -1,6 +1,7 @@
 \newrobustcmd\defeq{\mathrel{\hat{=}}}
 \newrobustcmd\+[1]{\mathcal{#1}}
-\newcommand{\case}[1]{\noindent\colorbox{light-gray}{#1}}
+\definecolor{light-gray}{gray}{0.9}
+\newrobustcmd{\case}[1]{\noindent\colorbox{light-gray}{#1}}
 
 \knowledgenewrobustcmd\pset[1]{\cmdkl{\mathcal{P}}(#1)}
 \newrobustcmd{\cat}[1]{\mathsf{#1}}
