@@ -52,11 +52,11 @@
 }
 
 \geometry{
-  left=3.5cm,
-  right=3.5cm,
-  bottom=3.5cm,
-  top=3.5cm,
-  footskip=1cm
+  left=3.8cm,
+  right=3.8cm,
+  bottom=3.8cm,
+  top=3.8cm,
+  footskip=1.75cm
 }
 \pagestyle{fancy}
 \fancyhf{}
@@ -165,7 +165,7 @@
 \RequirePackage[T1]{fontenc}
 
 \RequirePackage[sc, osf]{mathpazo}
-\RequirePackage[euler-digits, small]{eulervm}
+% \RequirePackage[euler-digits, small]{eulervm}
 \AtBeginDocument{
   \DeclareSymbolFont{AMSb}{U}{msb}{m}{n}
   \DeclareSymbolFontAlphabet{\mathbb}{AMSb}
