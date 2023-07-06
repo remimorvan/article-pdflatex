@@ -62,6 +62,10 @@
 \fancyhf{}
 \fancyfoot[C]{\thepage}
 
+% Footnotes
+
+\usepackage[hang,flushmargin]{footmisc}
+\setlength{\footnotemargin}{.7em}
 
 % -----------------
 % Title \& sections
