@@ -1,6 +1,6 @@
 \NeedsTeXFormat{LaTeX2e}
 \RequirePackage{etoolbox}
-\ProvidesClass{fancy-article}[11/02/2023]
+\ProvidesClass{fancy-article}[06/07/2023]
 
 
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}
@@ -145,18 +145,19 @@
 
 \usepackage{amsthm, thmtools, thm-restate}
 
-\declaretheorem[name=Theorem, refname={theorem,theorems}, numberwithin=section]{theorem}
-\declaretheorem[name=Proposition, refname={proposition,propositions}, sibling=theorem]{proposition}
-\declaretheorem[name=Property, refname={property,propertys}, sibling=theorem]{property}
-\declaretheorem[name=Definition, refname={definition,definitions}, sibling=theorem]{definition}
-\declaretheorem[name=Corollary, refname={corollary,corollaries}, sibling=theorem]{corollary}
-\declaretheorem[name=Conjecture, refname={conjecture,conjectures}, sibling=theorem]{conjecture}
-\declaretheorem[name=Question, refname={question,questions}, sibling=theorem]{question}
-\declaretheorem[name=Lemma, refname={lemma,lemmata}, sibling=theorem]{lemma}
-\declaretheorem[name=Example, refname={example,examples}, sibling=theorem]{example}
-\declaretheorem[name=Remark, refname={remark,remarks}, sibling=theorem]{remark}
-\declaretheorem[name=Fact, refname={fact,facts}, sibling=theorem]{fact}
-\declaretheorem[name=Fact, refname={claim,claims}, sibling=theorem]{claim}
+\declaretheoremstyle[bodyfont=\normalfont]{noitalics}
+\declaretheorem[name=Theorem, refname={theorem,theorems}, numberwithin=section, style=noitalics]{theorem}
+\declaretheorem[name=Proposition, refname={proposition,propositions}, sibling=theorem, style=noitalics]{proposition}
+\declaretheorem[name=Property, refname={property,propertys}, sibling=theorem, style=noitalics]{property}
+\declaretheorem[name=Definition, refname={definition,definitions}, sibling=theorem, style=noitalics]{definition}
+\declaretheorem[name=Corollary, refname={corollary,corollaries}, sibling=theorem, style=noitalics]{corollary}
+\declaretheorem[name=Conjecture, refname={conjecture,conjectures}, sibling=theorem, style=noitalics]{conjecture}
+\declaretheorem[name=Question, refname={question,questions}, sibling=theorem, style=noitalics]{question}
+\declaretheorem[name=Lemma, refname={lemma,lemmata}, sibling=theorem, style=noitalics]{lemma}
+\declaretheorem[name=Example, refname={example,examples}, sibling=theorem, style=noitalics]{example}
+\declaretheorem[name=Remark, refname={remark,remarks}, sibling=theorem, style=noitalics]{remark}
+\declaretheorem[name=Fact, refname={fact,facts}, sibling=theorem, style=noitalics]{fact}
+\declaretheorem[name=Fact, refname={claim,claims}, sibling=theorem, style=noitalics]{claim}
 
 % ---------------
 % ---- Fonts ----
@@ -171,7 +172,7 @@
   \DeclareSymbolFontAlphabet{\mathbb}{AMSb}
 }
 
-\linespread{1.08}
+\linespread{1.12}
 \RequirePackage[indent=1em]{parskip}
 
 % -------------
