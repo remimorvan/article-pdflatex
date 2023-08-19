@@ -161,7 +161,7 @@
 \declaretheorem[name=Example, refname={example,examples}, sibling=theorem, style=noitalics]{example}
 \declaretheorem[name=Remark, refname={remark,remarks}, sibling=theorem, style=noitalics]{remark}
 \declaretheorem[name=Fact, refname={fact,facts}, sibling=theorem, style=noitalics]{fact}
-\declaretheorem[name=Fact, refname={claim,claims}, sibling=theorem, style=noitalics]{claim}
+\declaretheorem[name=Claim, refname={claim,claims}, sibling=theorem, style=noitalics]{claim}
 
 % ---------------
 % ---- Fonts ----
