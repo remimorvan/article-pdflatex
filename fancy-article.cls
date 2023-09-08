@@ -16,25 +16,9 @@
 
 \RequirePackage{xcolor}
 
-\definecolor{Rich Black}{HTML}{001219}
-\definecolor{Blue Sapphire}{HTML}{005f73}
-\definecolor{Viridian Green}{HTML}{0a9396}
-\definecolor{Middle Blue Green}{HTML}{94d2bd}
-\definecolor{Medium Champagne}{HTML}{e9d8a6}
-\definecolor{Gamboge}{HTML}{ee9b00}
-\definecolor{Alloy Orange}{HTML}{ca6702}
-\definecolor{Mahogany}{HTML}{bb3e03}
-\definecolor{Rufous}{HTML}{ae2012}
-\definecolor{Ruby Red}{HTML}{9b2226}
-
-% \definecolor{Dark Ruby Red}{HTML}{7c1b1e}
-% \definecolor{Dark Blue Sapphire}{HTML}{004c5c}
-% \definecolor{Dark Gamboge}{HTML}{be7c00}
 \definecolor{Dark Ruby Red}{HTML}{580507}
 \definecolor{Dark Blue Sapphire}{HTML}{053641}
 \definecolor{Dark Gamboge}{HTML}{be7c00}
-
-
 
 % ---------------------------
 % Margins and header / footer
