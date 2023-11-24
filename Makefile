@@ -1,5 +1,5 @@
 PROJECTNAME = 
-NOTIONSFILE = header/kl-notions.tex
+NOTIONSFILE = kl/basic.kl -k kl/default.kl
 
 ifeq ($(PROJECTNAME), )
 	FILENAME = main
