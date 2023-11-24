@@ -31,8 +31,8 @@
  | knowledge-clustering
 
 \knowledge{notion}
- | notion
- | definition
+ | notion@notice
+ | definition@notice
 
 \knowledge{notion}
   | powerset
