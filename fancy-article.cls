@@ -23,11 +23,11 @@
 }
 
 \geometry{
-  left=3.8cm,
-  right=3.8cm,
-  bottom=3.8cm,
-  top=3.8cm,
-  footskip=1.75cm
+  left=3.6cm,
+  right=3.6cm,
+  bottom=3.6cm,
+  top=3.6cm,
+  footskip=1.65cm
 }
 \pagestyle{fancy}
 \fancyhf{}
@@ -147,7 +147,7 @@
   \DeclareSymbolFontAlphabet{\mathbb}{AMSb}
 }
 
-\linespread{1.12}
+\linespread{1.18}
 \RequirePackage[indent=1em]{parskip}
 
 % -------------

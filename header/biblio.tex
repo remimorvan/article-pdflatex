@@ -1,0 +1,24 @@
+\usepackage[
+  style=alphabetic,
+  autocite=footnote,
+  maxalphanames=5,
+  maxbibnames=99,
+  backend=biber,
+  backref=false
+]{biblatex}
+\bibliography{bibli.bib}
+
+% https://tex.stackexchange.com/questions/298988/controlling-indentation-with-biblatex-alphabetic-style
+\defbibenvironment{bibliography}
+  {\list
+     {\printtext[labelalphawidth]{%
+        \printfield{prefixnumber}%
+        \printfield{labelalpha}%
+        \printfield{extraalpha}}}
+     {\setlength{\labelsep}{1\labelsep}%
+      \setlength{\leftmargin}{0pt}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}}%
+      \renewcommand*{\makelabel}[1]{\textcolor{Dark Ruby Red}{\textbf{##1\hss}}}}
+  {\endlist}
+  {\item}

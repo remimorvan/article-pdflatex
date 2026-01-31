@@ -12,3 +12,5 @@
 *.fls
 *.zip
 main.pdf
+*.bcf
+*.run.xml
