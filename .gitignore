@@ -11,6 +11,5 @@
 *.fdb_latexmk
 *.fls
 *.zip
-main.pdf
 *.bcf
 *.run.xml
