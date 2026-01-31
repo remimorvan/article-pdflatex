@@ -1,5 +1,4 @@
 PROJECTNAME = 
-NOTIONSFILE = kl/basic.kl -k kl/default.kl
 
 ifeq ($(PROJECTNAME), )
 	FILENAME = main
@@ -17,7 +16,7 @@ all:
 	latexmk -pdf -use-make -synctex=1 -interaction=nonstopmode -file-line-error $(TEXFILE) -silent
 
 kl:
-	knowledge cluster -k $(NOTIONSFILE) -d $(DIAGNOSEFILE)
+	knowledge cluster -d $(DIAGNOSEFILE)
 
 clean: # Clean all nonessential files, except dvi, pdf and ps files
 	latexmk -c -silent
