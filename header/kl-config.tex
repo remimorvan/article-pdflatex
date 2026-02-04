@@ -3,27 +3,26 @@
 \knowledgeconfigure{diagnose line=true, diagnose bar=true}
 
 \IfKnowledgePaperModeTF{
-    %
 }{
     % If we are NOT in paper mode (i.e. in composition mode or electronic mode)
-    \knowledgestyle{intro notion}{color={Dark Ruby Red}, emphasize}
-    \knowledgestyle{notion}{color={Dark Blue Sapphire}}
+    \knowledgestyle{intro notion}{color={KlDefn}, emphasize, index style=textbf}
+    \knowledgestyle{notion}{color={KlLink}}
     \hypersetup{
         colorlinks=true,
         breaklinks=true,
-        linkcolor={Dark Blue Sapphire}, % Links to sections, pages, etc.
-        citecolor={Dark Blue Sapphire}, % Links to bibliography
-        filecolor={Dark Blue Sapphire}, % Links to local file
-        urlcolor={Dark Blue Sapphire},
+        linkcolor={KlLink}, % Links to sections, pages, etc.
+        citecolor={KlCite}, % Links to bibliography
+        filecolor={KlLink}, % Links to local file
+        urlcolor={KlUrl}, % Links for URLs
     }
     \IfKnowledgeElectronicModeTF{
         %
     }{
         % If we are in composition mode, highlight unknown stuff (in yellow) and display the anchor point.
-        \knowledgeconfigure{anchor point color={Dark Ruby Red}, anchor point shape=corner}
-        \knowledgestyle{intro unknown}{color={Dark Gamboge}, emphasize}
-        \knowledgestyle{intro unknown cont}{color={Dark Gamboge}, emphasize}
-        \knowledgestyle{kl unknown}{color={Dark Gamboge}}
-        \knowledgestyle{kl unknown cont}{color={Dark Gamboge}}
+        \knowledgeconfigure{anchor point color={KlDefn}, anchor point shape=corner}
+        \knowledgestyle{intro unknown}{color={KlWarning}, emphasize}
+        \knowledgestyle{intro unknown cont}{color={KlWarning}, emphasize}
+        \knowledgestyle{kl unknown}{color={KlWarning}}
+        \knowledgestyle{kl unknown cont}{color={KlWarning}}
     }
 }
