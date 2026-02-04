@@ -1,6 +1,8 @@
-\newrobustcmd\defeq{\mathrel{\hat{=}}}
-\newrobustcmd\+[1]{\mathcal{#1}}
 \definecolor{light-gray}{gray}{0.9}
 \newrobustcmd{\case}[1]{\noindent\colorbox{light-gray}{#1}}
 
-\newrobustcmd{\todo}[1]{{\bfseries TODO: #1}}
+\newrobustcmd{\todo}[1]{{\color{cRed}\bfseries TODO: #1}}
+
+\usepackage{stmaryrd}
+\newrobustcmd{\lBracket}{\llbracket}
+\newrobustcmd{\rBracket}{\rrbracket}
