@@ -1,8 +1,106 @@
-\definecolor{light-gray}{gray}{0.9}
-\newrobustcmd{\case}[1]{\noindent\colorbox{light-gray}{#1}}
+% ---
+% Dependencies
+% ---
+\usepackage{mathtools} % cases*
+\usepackage{dutchcal} % Supports lowercase calligraphic glyphs 
 
-\newrobustcmd{\todo}[1]{{\color{cRed}\bfseries TODO: #1}}
+% % Algorithms
+% \usepackage[noend]{algorithm2e}
+% \SetKwInput{KwInput}{Input}
+% %https://tex.stackexchange.com/questions/37181/linebreak-in-package-algorithm2e
+% \makeatletter
+% \newcommand{\nosemic}{\renewcommand{\@endalgocfline}{\relax}}% Drop semi-colon ;
+% \newcommand{\dosemic}{\renewcommand{\@endalgocfline}{\algocf@endline}}% Reinstate semi-colon ;
+% \newcommand{\pushline}{\Indp}% Indent
+% \newcommand{\popline}{\Indm\dosemic}% Undent
+% \makeatother
 
-\usepackage{stmaryrd}
-\newrobustcmd{\lBrack}{\llbracket}
-\newrobustcmd{\rBrack}{\rrbracket}
+% ---
+% Basic
+% ---
+\newrobustcmd{\case}[1]{\noindent{\color{maincolor}\rule{0.73em}{0.73em}}~\textbf{#1}}
+\newrobustcmd{\todo}[1]{{\color{mPink}\bfseries TODO: #1}}
+% \newrobustcmd{\anonymized}[1]{{\color{mPink}\bfseries anonymized}}
+
+\renewcommand{\emptyset}{\varnothing}
+% \newrobustcmd{\lBrack}{\llbracket}
+% \newrobustcmd{\rBrack}{\rrbracket}
+
+% math in captions is bold, like their text
+\DeclareCaptionFont{boldmath}{\boldmath}
+\captionsetup{textfont+={boldmath}}
+
+% \newrobustcmd\decisionproblem[3]{
+% 	\begin{center}
+% 	\AP\fbox{%
+% 	\begin{tabular}{rl}
+% 	\multicolumn{2}{l}{#1} \\
+% 	{\emph{Input}}: & \parbox[t]{.73\linewidth}{#2} \\
+% 	{\emph{Question}}: & \parbox[t]{.73\linewidth}{#3}\\[.3em]
+% 	\end{tabular}
+% 	}
+% 	\end{center}
+% }
+% \newrobustcmd{\DPfont}[1]{\normalfont{\scshape #1}}
+
+% ---
+% Smash left/right arrow
+% ---
+% \newrobustcmd\smashxrightarrow[1]{%
+%   	\raisebox{-.04em}{$%
+% 		\xrightarrow{\smash{\raisebox{-.1em}{%
+% 	  		\tiny{#1}%
+% 		}}}%
+%   	$}%
+% }%
+% \newrobustcmd\smashxleftarrow[1]{%
+% 	\raisebox{-.04em}{$%
+% 		\xleftarrow{\smash{\raisebox{-.1em}{%
+% 			\tiny{#1}%
+% 		}}}%
+% 	$}%
+% }%
+% \newrobustcmd\smashxleftrightarrow[1]{%
+% 	\raisebox{-.04em}{$%
+% 		\xrightleftharpoons{\smash{\raisebox{-.1em}{%
+% 			\tiny{#1}%
+% 		}}}%
+% 	$}%
+% }%
+
+% ---
+% Knowledge: intro in restatable
+% Usage: instead of \intro use \introinrestatable in restable environments.
+% Surround the main statement (where you want the notions to be introduced)
+% with a `mainstatement` environment.
+% ---
+
+% \newif\ifmainstatement
+% \mainstatementfalse
+
+% \newrobustcmd\introinrestatable[1]{%
+% 	\ifmainstatement%
+% 		\intro{#1}%
+% 	\else%
+% 		\kl{#1}%
+% 	\fi%
+% }
+
+% \newrobustcmd\introinrestatableopt[1]{%
+% 	\ifmainstatement%
+% 		\intro[#1]{#1}%
+% 	\else%
+% 		\kl[#1]{#1}%
+% 	\fi%
+% }
+
+% \newenvironment{mainstatement}{
+%   \mainstatementtrue
+% }{
+%   \mainstatementfalse
+% }
+
+% \newenvironment{ai}{
+%   \section*{AI Disclosure Statement}
+% }{
+% }

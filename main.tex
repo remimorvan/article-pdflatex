@@ -48,10 +48,7 @@ The notion of "first-order formula" is introduced in
  
 \subsection{The powerset monad}
 
-\AP The ""powerset"" of $X$ is denoted by $\intro*\pset{X}$. The categories
-of sets, monoids and semigroups are denoted by $\intro*\catSet$,
-$\intro*\catMon$ and $\intro*\catSgp$, respectively.
-This notion is "unknown". We define this ""unknown"" stuff, and then call it again: "unknown".
+\AP The ""powerset"" of $X$ is denoted by $\intro*\pset{X}$.
 
 \begin{figure}
   \begin{center}
@@ -82,10 +79,6 @@ Note that terminal objects and "cartesian products" are unique, up to
 isomorphism, and that $X \times 1$ and $1\times X$ are isomorphic to $X$
 for all $X \in \mathcal{C}$.
 
-\AP It is routine to check that $\catSet$, $\catMon$ and $\catSgp$ are
-"cartesian". Moreover, the forgetful functors from $\catMon \to \catSgp$
-and $\catSgp \to \catSet$ preserve "cartesian products".
-
 
 \AP Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc nulla mauris, facilisis a elementum at, rutrum a metus. Vestibulum neque lorem, pretium sed sapien ut, pulvinar dictum turpis. Phasellus tempor, mauris quis euismod bibendum, lectus neque cursus eros, tincidunt maximus dui enim nec sem. Suspendisse risus est, euismod nec egestas a, tempor vitae massa. Vestibulum mollis sapien ligula, ac condimentum libero pharetra eget. Interdum et malesuada fames ac ante ipsum primis in faucibus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam feugiat volutpat finibus. Sed lobortis velit enim, vitae malesuada mi aliquet id. Mauris convallis facilisis erat non tempor. Sed ullamcorper velit quis lacus facilisis placerat \cite{rosenstein1982linear}.
 
@@ -95,9 +88,9 @@ and $\catSgp \to \catSet$ preserve "cartesian products".
     \toprule
     Category & Arrows \\
     \midrule
-    $\catSet$ & Functions \\
-    $\catMon$ & Monoid morphisms \\
-    $\catSgp$ & Semigroup morphisms \\
+    \textsf{Cat} & Functions \\
+    \textsf{Mon} & Monoid morphisms \\
+    \textsf{Sgp} & Semigroup morphisms \\
     \bottomrule
   \end{tabular}
   \caption{Some table}

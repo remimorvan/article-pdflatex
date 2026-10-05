@@ -1,8 +1,21 @@
+% ---
+% Basic
+% --- 
 \newrobustcmd\defeq{\mathrel{\hat{=}}}
-\newrobustcmd\+[1]{\mathcal{#1}}
+\newrobustcmd\?{\mathbf}
+\newrobustcmd\+{\mathcal}
 
-\knowledgenewrobustcmd\pset[1]{\cmdkl{\mathcal{P}}(#1)}
-\newrobustcmd{\cat}[1]{\mathsf{#1}}
-\knowledgenewrobustcmd\catSet{\cmdkl{\cat{Set}}}
-\knowledgenewrobustcmd\catSgp{\cmdkl{\cat{Sgp}}}
-\knowledgenewrobustcmd\catMon{\cmdkl{\cat{Mon}}}
+\newrobustcmd\card[1]{|#1|}
+\newrobustcmd{\set}[1]{\{#1\}}
+\newrobustcmd{\tup}[1]{\langle#1\rangle}
+
+\newrobustcmd\N{\mathbb{N}} % natural numbers
+\newrobustcmd\Np{\N_{>0}} % strictly positive nat. numbers
+\knowledgenewrobustcmd\intInt[1]{\cmdkl{\lBrack} #1 \cmdkl{\rBrack}} % interval of integers
+
+\knowledgenewrobustcmd\restr[2]{{% function restriction
+  #1 \cmdkl{\raisebox{-.1em}{$\vert$}{}_{#2}}
+}}
+
+\knowledgenewrobustcmd\pset[1]{\cmdkl{\mathfrak{P}(#1)}} % powerset
+\knowledgenewrobustcmd\psetp[1]{\cmdkl{\mathfrak{P}_+(#1)}} % strict powerset
